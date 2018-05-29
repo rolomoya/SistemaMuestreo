@@ -132,5 +132,13 @@
         tools:layout_constraintLeft_creator="1"
         app:layout_constraintLeft_toLeftOf="parent" />
 
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Registrar"
+        tools:layout_editor_absoluteX="148dp"
+        tools:layout_editor_absoluteY="436dp" />
+
 
 </android.support.constraint.ConstraintLayout>
