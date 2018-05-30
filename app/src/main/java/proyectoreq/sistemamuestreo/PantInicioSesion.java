@@ -1,5 +1,6 @@
 package proyectoreq.sistemamuestreo;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -22,7 +23,9 @@ public class PantInicioSesion extends AppCompatActivity {
                 String usuario = ((EditText) findViewById(R.id.campoUsuario)).getText().toString();
                 String contraseña = ((EditText) findViewById(R.id.campoContra)).getText().toString();
                 if ("ihasbum".equals(usuario) && "admin".equals(contraseña)){
-                    Toast.makeText(getApplicationContext(), "FELICIDADES!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "Ingreso exitoso", Toast.LENGTH_SHORT).show();
+                    Intent nuevaPant = new Intent(PantInicioSesion.this, MenuAdmin.class);
+                    startActivity(nuevaPant);
                 }
                 else{
                     Toast.makeText(getApplicationContext(), "Usuario o contraseña incorecta", Toast.LENGTH_SHORT).show();
