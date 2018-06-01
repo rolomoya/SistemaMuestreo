@@ -18,7 +18,6 @@
         </activity>
         <activity android:name=".MenuAdmin" />
         <activity android:name=".pantOperacion" />
-        <activity android:name=".MainActivity"></activity>
     </application>
 
 </manifest>
