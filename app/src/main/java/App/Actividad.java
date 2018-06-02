@@ -1,11 +1,13 @@
+package App;
+
 public class Actividad {
 
     private String nombre;
-    private String descrip;
+    private String tipo;
 
-    public Actividad(String nombre, String descrip) {
+    public Actividad(String nombre, String tipo) {
         this.nombre = nombre;
-        this.descrip = descrip;
+        this.tipo = tipo;
     }
 
     public String getNombre() {
@@ -16,11 +18,11 @@ public class Actividad {
         this.nombre = nombre;
     }
 
-    public String getDescrip() {
-        return descrip;
+    public String getTipo() {
+        return tipo;
     }
 
-    public void setDescrip(String descrip) {
-        this.descrip = descrip;
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
     }
 }

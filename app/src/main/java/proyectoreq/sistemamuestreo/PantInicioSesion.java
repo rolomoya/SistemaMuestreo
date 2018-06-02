@@ -6,9 +6,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RadioButton;
 import android.widget.Toast;
 
-import java.util.ArrayList;
 
 public class PantInicioSesion extends Activity {
 
@@ -16,7 +16,13 @@ public class PantInicioSesion extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pant_inicio_sesion);
-        final Button boton = (Button) findViewById(R.id.botonIniciar);
+
+        RadioButton rAdmin, rAnalist;
+        final Button boton = findViewById(R.id.botonIniciar);
+        final Button botonReg = findViewById(R.id.botonRegistrar);
+        rAdmin = findViewById(R.id.radioAdmin);
+        rAnalist = findViewById(R.id.radioAnalista);
+
         boton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -34,4 +40,5 @@ public class PantInicioSesion extends Activity {
         });
 
     }
+
 }
