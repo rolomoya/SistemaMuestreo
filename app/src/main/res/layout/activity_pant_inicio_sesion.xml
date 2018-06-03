@@ -113,24 +113,24 @@
 
     <Button
         android:id="@+id/botonIniciar"
-        android:layout_width="wrap_content"
+        android:layout_width="165dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="46dp"
+        android:onClick="onClick"
         android:text="Iniciar sesión"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/radioGroup"
         tools:layout_constraintLeft_creator="1"
         tools:layout_constraintRight_creator="1"
-        tools:layout_constraintTop_creator="1"
-        android:onClick="onClick"/>
+        tools:layout_constraintTop_creator="1" />
 
     <Button
         android:id="@+id/botonRegistrar"
-        android:layout_width="wrap_content"
+        android:layout_width="165dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="30dp"
-        android:text="REGISTRAR"
+        android:text="Registrar Usuario"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
