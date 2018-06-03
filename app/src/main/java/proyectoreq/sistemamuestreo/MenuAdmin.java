@@ -21,7 +21,10 @@ public class MenuAdmin extends Activity {
         if (v.getId() == R.id.botonNuevaOp){
             Intent pantOp = new Intent(MenuAdmin.this, pantOperacion.class);
             startActivity(pantOp);
-            Toast.makeText(getApplicationContext(), "NUEVA OP", Toast.LENGTH_SHORT).show();
+        }
+        else if(v.getId() == R.id.botonNuevaAct){
+            Intent pantAct = new Intent(MenuAdmin.this,CrearActividad.class);
+            startActivity(pantAct);
         }
     }
 

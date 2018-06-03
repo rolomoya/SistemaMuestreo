@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CrearActividad"
+    tools:layout_editor_absoluteY="81dp">
+
+    <EditText
+        android:id="@+id/campoNombreActiv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="37dp"
+        android:ems="10"
+        android:hint="Nombre"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tituloAct" />
+
+    <Spinner
+        android:id="@+id/spinnerTiposActiv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        app:layout_constraintEnd_toEndOf="@+id/campoNombreActiv"
+        app:layout_constraintTop_toBottomOf="@+id/campoNombreActiv" />
+
+    <TextView
+        android:id="@+id/tituloAct"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="21dp"
+        android:text="Crear actividad"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/botonCrearActividad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="64dp"
+        android:layout_marginTop="48dp"
+        android:text="CREAR"
+        app:layout_constraintEnd_toEndOf="@+id/spinnerTiposActiv"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerTiposActiv"
+        android:onClick="onClick"/>
+
+    <TextView
+        android:id="@+id/tituloActivi2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="37dp"
+        android:text="Tipo:"
+        app:layout_constraintEnd_toStartOf="@+id/campoNombreActiv"
+        app:layout_constraintStart_toStartOf="@+id/campoNombreActiv"
+        app:layout_constraintTop_toBottomOf="@+id/campoNombreActiv" />
+
+</android.support.constraint.ConstraintLayout>
