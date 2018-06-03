@@ -8,7 +8,7 @@
     tools:layout_editor_absoluteY="81dp">
 
     <Button
-        android:id="@+id/botonNuevaOp"
+        android:id="@+id/botonPantNuevaOp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="44dp"
@@ -19,27 +19,27 @@
         android:onClick="onClick"/>
 
     <Button
-        android:id="@+id/botonNuevaAct"
+        android:id="@+id/botonPantNuevaAct"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="48dp"
         android:text="Crear actividad"
-        app:layout_constraintEnd_toEndOf="@+id/botonNuevaOp"
-        app:layout_constraintTop_toBottomOf="@+id/botonNuevaOp"
+        app:layout_constraintEnd_toEndOf="@+id/botonPantNuevaOp"
+        app:layout_constraintTop_toBottomOf="@+id/botonPantNuevaOp"
         android:onClick="onClick"/>
 
     <Button
-        android:id="@+id/botonAsignarTar"
+        android:id="@+id/botonPantAsignarTar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="48dp"
         android:text="Asignar tareas"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/botonAsignarAn" />
+        app:layout_constraintTop_toBottomOf="@+id/botonPantAsignarAn" />
 
     <Button
-        android:id="@+id/botonAsignarAn"
+        android:id="@+id/botonPantAsignarAn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="48dp"
@@ -47,7 +47,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.515"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/botonNuevaAct" />
+        app:layout_constraintTop_toBottomOf="@+id/botonPantNuevaAct"
+        android:onClick="onClick"/>
 
     <TextView
         android:id="@+id/titulo"
