@@ -4,8 +4,6 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
-import android.widget.Toast;
 
 public class MenuAdmin extends Activity {
 
@@ -18,10 +16,18 @@ public class MenuAdmin extends Activity {
     }
 
     public void onClick(View v){
-        if (v.getId() == R.id.botonNuevaOp){
+        if (v.getId() == R.id.botonPantNuevaOp){
             Intent pantOp = new Intent(MenuAdmin.this, pantOperacion.class);
             startActivity(pantOp);
-            Toast.makeText(getApplicationContext(), "NUEVA OP", Toast.LENGTH_SHORT).show();
+        }
+        else if(v.getId() == R.id.botonPantNuevaAct){
+            Intent pantAct = new Intent(MenuAdmin.this,CrearActividad.class);
+            startActivity(pantAct);
+        }
+
+        else if(v.getId() == R.id.botonPantAsignarAn){
+            Intent pantAsigAn = new Intent(MenuAdmin.this,AsignarAnalista.class);
+            startActivity(pantAsigAn);
         }
     }
 
