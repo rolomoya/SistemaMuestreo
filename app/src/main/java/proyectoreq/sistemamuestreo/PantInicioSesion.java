@@ -17,28 +17,25 @@ public class PantInicioSesion extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pant_inicio_sesion);
 
+
+    }
+
+    public void onClick(View view) {
+        String usuario = ((EditText) findViewById(R.id.campoUsuario)).getText().toString();
+        String contraseña = ((EditText) findViewById(R.id.campoContra)).getText().toString();
         RadioButton rAdmin, rAnalist;
-        final Button boton = findViewById(R.id.botonIniciar);
-        final Button botonReg = findViewById(R.id.botonRegistrar);
         rAdmin = findViewById(R.id.radioAdmin);
         rAnalist = findViewById(R.id.radioAnalista);
 
-        boton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                String usuario = ((EditText) findViewById(R.id.campoUsuario)).getText().toString();
-                String contraseña = ((EditText) findViewById(R.id.campoContra)).getText().toString();
-                if ("ihasbum".equals(usuario) && "admin".equals(contraseña)){
-                    Toast.makeText(getApplicationContext(), "Ingreso exitoso", Toast.LENGTH_SHORT).show();
-                    Intent nuevaPant = new Intent(PantInicioSesion.this, MenuAdmin.class);
-                    startActivity(nuevaPant);
-                }
-                else{
-                    Toast.makeText(getApplicationContext(), "Usuario o contraseña incorecta", Toast.LENGTH_SHORT).show();
-                }
+        if(view.getId() == R.id.botonIniciar) {
+            if ("ihasbum".equals(usuario) && "admin".equals(contraseña)) {
+                Toast.makeText(getApplicationContext(), "Ingreso exitoso", Toast.LENGTH_SHORT).show();
+                Intent nuevaPant = new Intent(PantInicioSesion.this, MenuAdmin.class);
+                startActivity(nuevaPant);
+            } else {
+                Toast.makeText(getApplicationContext(), "Usuario o contraseña incorecta", Toast.LENGTH_SHORT).show();
             }
-        });
-
+        }
     }
 
 }
