@@ -17,6 +17,8 @@ public class PantInicioSesion extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pant_inicio_sesion);
 
+        ConexionSQLiteHelper conn = new ConexionSQLiteHelper(this,"bd_muestreos",null,1);
+
 
     }
 
