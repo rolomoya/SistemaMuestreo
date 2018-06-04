@@ -1,6 +1,8 @@
 package proyectoreq.sistemamuestreo.entidades;
 
-public class ObservacionesXMuestreo {
+import java.io.Serializable;
+
+public class ObservacionesXMuestreo implements Serializable {
     private Integer IdObservacionesXMuestreo;
     private Integer IdTarea;
     private Integer IdTrabajador;

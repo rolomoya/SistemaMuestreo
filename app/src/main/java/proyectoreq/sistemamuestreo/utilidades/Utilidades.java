@@ -10,14 +10,14 @@ public class Utilidades {
 
 
 
-    public static final String Crear_Tabla_Usuarios = "CREATE TABLE " + Tabla_Usuarios +" ("+Registro_IdUsuario+" Integer, "+Registro_NombreUsuario+" Text, "+Registro_Usuario+" Text, "+Registro_Contrasenna+" Text)";
+    public static final String Crear_Tabla_Usuarios = "CREATE TABLE " + Tabla_Usuarios +" ("+Registro_IdUsuario+" Integer PRIMARY KEY AUTOINCREMENT, "+Registro_NombreUsuario+" Text, "+Registro_Usuario+" Text, "+Registro_Contrasenna+" Text)";
 
     public static final String Tabla_Operaciones = "operaciones";
     public static final String Registro_IdOperacion = "idOperacion";
     public static final String Registro_NombreOperacion = "nombre";
     public static final String Registro_DescripcionOperacion  = "descripcion";
 
-    public static final String Crear_Tabla_Operaciones = "CREATE TABLE "+Tabla_Operaciones+" ("+Registro_IdOperacion+" Integer,"+Registro_NombreOperacion+" Text, "+Registro_DescripcionOperacion+" Text)";
+    public static final String Crear_Tabla_Operaciones = "CREATE TABLE "+Tabla_Operaciones+" ("+Registro_IdOperacion+" Integer PRIMARY KEY AUTOINCREMENT,"+Registro_NombreOperacion+" Text, "+Registro_DescripcionOperacion+" Text)";
     public static final String Crear_Tabla_Tareas = "CREATE TABLE tareas (idTarea Integer, nombre Text, tipo Text)";
     public static final String Crear_Tabla_Trabajadores = "CREATE TABLE trabajadores (idTrabajador Integer, alias Text, puesto Text)";
     public static final String Crear_Tabla_Muestreos = "CREATE TABLE muestreos (idMuestreo Integer, descripcion Text, cantObservaciones Integer, idOperacion Integer, FechaInicio Text)";

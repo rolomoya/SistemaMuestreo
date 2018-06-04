@@ -1,6 +1,8 @@
 package proyectoreq.sistemamuestreo.entidades;
 
-public class Tareas {
+import java.io.Serializable;
+
+public class Tareas implements Serializable {
     private Integer idTarea;
     private String nombre;
     private String tipo;

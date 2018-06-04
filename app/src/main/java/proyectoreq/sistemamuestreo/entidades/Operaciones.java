@@ -1,6 +1,8 @@
 package proyectoreq.sistemamuestreo.entidades;
 
-public class Operaciones {
+import java.io.Serializable;
+
+public class Operaciones implements Serializable {
     private Integer idOperacion;
     private String nombre;
     private String descripcion;

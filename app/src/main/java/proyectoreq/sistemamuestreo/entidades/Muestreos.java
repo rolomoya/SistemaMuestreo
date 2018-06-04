@@ -1,6 +1,8 @@
 package proyectoreq.sistemamuestreo.entidades;
 
-public class Muestreos {
+import java.io.Serializable;
+
+public class Muestreos implements Serializable{
     private Integer idMuestreo;
     private String descripcion;
     private Integer cantObservaciones;
