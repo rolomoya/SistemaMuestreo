@@ -20,7 +20,8 @@
         <activity android:name=".Controladores.pantOperacion" />
         <activity android:name=".Controladores.CrearActividad" />
         <activity android:name=".Controladores.AsignarAnalista" />
-        <activity android:name=".Controladores.RegistrarUsuario"></activity>
+        <activity android:name=".Controladores.RegistrarUsuario" />
+        <activity android:name=".Controladores.ConsultOperaciones"></activity>
     </application>
 
 </manifest>
