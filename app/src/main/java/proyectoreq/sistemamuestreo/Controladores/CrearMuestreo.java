@@ -74,9 +74,8 @@ public class CrearMuestreo extends Activity {
         Cursor cursor = bd.rawQuery("SELECT * FROM " + Utilidades.Tabla_Trabajadores, null);
         while (cursor.moveToNext()) {
             Trabajador trabajador = new Trabajador();
-            trabajador.setNombre(cursor.getString(1));
-            trabajador.setAlias(cursor.getString(2));
-            trabajador.setPuesto(cursor.getString(3));
+            trabajador.setAlias(cursor.getString(1));
+            trabajador.setPuesto(cursor.getString(2));
             listObTr.add(trabajador);
         }
 
@@ -87,7 +86,7 @@ public class CrearMuestreo extends Activity {
 
         listTra = new ArrayList<String>();
         for(int i = 0; i < listObTr.size(); i++){
-            listTra.add(listObTr.get(i).getNombre());
+            listTra.add(listObTr.get(i).getAlias());
         }
     }
 }
