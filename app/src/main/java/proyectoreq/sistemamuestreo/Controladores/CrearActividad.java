@@ -76,6 +76,7 @@ public class CrearActividad extends Activity {
         System.out.println(tipo);
         ConexionSQLiteHelper conn = new ConexionSQLiteHelper(this,"bd_muestreos",null,1);
         SQLiteDatabase db = conn.getWritableDatabase();
+
         Toast.makeText(getApplicationContext(), "Tipo: "+tipo, Toast.LENGTH_SHORT).show();
 
         if(! tipo.isEmpty()) {
