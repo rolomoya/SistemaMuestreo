@@ -31,7 +31,7 @@ public class CrearActividad extends Activity {
 
         Spinner spinnerTipos = findViewById(R.id.spinnerTiposActiv);
 
-
+        tipo = "";
 
         obtLista();
 
@@ -65,33 +65,34 @@ public class CrearActividad extends Activity {
     }
 
 
-    public void onClick(){
+    public void onClick(View view){
         //Llamar sql para guardar en bd la actividad
         registrar_Tarea();
     }
 
     private void registrar_Tarea() {
         String nomTarea = ((EditText)findViewById(R.id.campoNombreActiv)).getText().toString(); // String que se agarra del campo de nombre
-        //String tipo = ((EditText)findViewById(R.id.spinnerTiposActiv)) // String que se agarra del campo de descripcion
         System.out.println(nomTarea);
-        //System.out.println(tipo);
+        System.out.println(tipo);
         ConexionSQLiteHelper conn = new ConexionSQLiteHelper(this,"bd_muestreos",null,1);
         SQLiteDatabase db = conn.getWritableDatabase();
+        Toast.makeText(getApplicationContext(), "Tipo: "+tipo, Toast.LENGTH_SHORT).show();
 
+        if(! tipo.isEmpty()) {
+            try {
+                ContentValues values = new ContentValues();
 
-        try {
-            ContentValues values = new ContentValues();
+                values.put(Utilidades.Registro_NombreTarea, nomTarea);
+                values.put(Utilidades.Registro_TipoTarea, tipo);
 
-            values.put(Utilidades.Registro_NombreTarea,nomTarea);
-         //   values.put(Utilidades.Registro_TipoTarea,tipo);
+                Long idResult = db.insert(Utilidades.Tabla_Tareas, Utilidades.Registro_IdTarea, values);
+                Toast.makeText(getApplicationContext(), "Tarea registrada correctamente", Toast.LENGTH_SHORT).show();
 
-            Long idResult = db.insert(Utilidades.Tabla_Tareas,Utilidades.Registro_IdTarea,values);
-            Toast.makeText(getApplicationContext(), "Tarea registrada correctamente", Toast.LENGTH_SHORT).show();
-
-        } catch (SQLException e) {
-            e.printStackTrace();
-            Toast.makeText(getApplicationContext(), "No se pudo registrar la tarea", Toast.LENGTH_SHORT).show();
-        }
+            } catch (SQLException e) {
+                e.printStackTrace();
+                Toast.makeText(getApplicationContext(), "No se pudo registrar la tarea", Toast.LENGTH_SHORT).show();
+            }
+        } else Toast.makeText(getApplicationContext(), "Seleccione un tipo", Toast.LENGTH_SHORT).show();
         db.close();
     }
 }
