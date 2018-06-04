@@ -7,15 +7,14 @@
     tools:context=".Controladores.RegistrarTrabajador"
     tools:layout_editor_absoluteY="81dp">
 
-    <EditText
-        android:id="@+id/campoNombreTrab"
-        android:layout_width="0dp"
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="64dp"
-        android:ems="10"
-        android:hint="Nombre del trabajador(a)"
-        android:inputType="textPersonName"
+        android:layout_marginTop="52dp"
+        android:text="Nuevo trabajador"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.484"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -24,6 +23,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="76dp"
+        android:onClick="onClick"
         android:text="REGISTRAR"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -31,25 +31,26 @@
 
     <EditText
         android:id="@+id/campoAlias"
-        android:layout_width="0dp"
+        android:layout_width="259dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
         android:ems="10"
         android:hint="Alias"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/campoNombreTrab" />
+        tools:layout_editor_absoluteY="169dp" />
 
     <EditText
         android:id="@+id/campoPuesto"
-        android:layout_width="0dp"
+        android:layout_width="259dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="31dp"
+        android:layout_marginTop="56dp"
         android:ems="10"
         android:hint="Puesto"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/campoAlias" />
 </android.support.constraint.ConstraintLayout>
