@@ -16,5 +16,7 @@ public class RegistrarTrabajador extends Activity {
 
     public void onClick(){
         String nombreTrab = ((EditText) findViewById(R.id.campoNombreTrab)).getText().toString();
+        String alias = ((EditText) findViewById(R.id.campoAlias)).getText().toString();
+        String puesto = ((EditText) findViewById(R.id.campoPuesto)).getText().toString();
     }
 }
