@@ -8,6 +8,7 @@ import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.Toast;
 
+import proyectoreq.sistemamuestreo.PantallasAnalista.PantPrincipalAnalista;
 import proyectoreq.sistemamuestreo.R;
 
 
@@ -31,12 +32,17 @@ public class PantInicioSesion extends Activity {
         rAnalist = findViewById(R.id.radioAnalista);
 
         if(view.getId() == R.id.botonIniciar) {
-            if ("ihasbum".equals(usuario) && "admin".equals(contraseña)) {
-                Toast.makeText(getApplicationContext(), "Ingreso exitoso", Toast.LENGTH_SHORT).show();
-                Intent nuevaPant = new Intent(PantInicioSesion.this, MenuAdmin.class);
-                startActivity(nuevaPant);
-            } else {
-                Toast.makeText(getApplicationContext(), "Usuario o contraseña incorecta", Toast.LENGTH_SHORT).show();
+            if (rAdmin.isChecked()) {
+                if ("ihasbum".equals(usuario) && "admin".equals(contraseña)) {
+                    Toast.makeText(getApplicationContext(), "Ingreso admin exitoso", Toast.LENGTH_SHORT).show();
+                    Intent nuevaPant = new Intent(PantInicioSesion.this, MenuAdmin.class);
+                    startActivity(nuevaPant);
+                } else {
+                    Toast.makeText(getApplicationContext(), "Usuario o contraseña incorecta", Toast.LENGTH_SHORT).show();
+                }
+            }else{
+                Intent pantAnalista = new Intent(PantInicioSesion.this, PantPrincipalAnalista.class);
+                startActivity(pantAnalista);
             }
         }
 
