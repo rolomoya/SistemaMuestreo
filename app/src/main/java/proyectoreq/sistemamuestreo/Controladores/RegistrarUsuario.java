@@ -2,6 +2,7 @@ package proyectoreq.sistemamuestreo.Controladores;
 
 import android.app.Activity;
 import android.content.ContentValues;
+import android.content.Intent;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
@@ -52,6 +53,8 @@ public class RegistrarUsuario extends Activity {
             Toast.makeText(getApplicationContext(), "No se pudo registrar el usuario", Toast.LENGTH_SHORT).show();
         }
         db.close();
+        Intent devolver = new Intent(RegistrarUsuario.this,PantInicioSesion.class);
+        startActivity(devolver);
     }
 
 }

@@ -2,22 +2,11 @@ package App;
 
 public class Usuario {
 
-    private Integer id;
     private String nombre;
     private String contrasena;
 
-    public Usuario(Integer id, String nombre, String contrasena) {
-        this.id = id;
-        this.nombre = nombre;
-        this.contrasena = contrasena;
-    }
+    public Usuario() {
 
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
     }
 
     public String getNombre() {
