@@ -42,8 +42,9 @@ public class pantOperacion extends Activity {
             values.put(Utilidades.Registro_NombreOperacion,nomOp);
             values.put(Utilidades.Registro_DescripcionOperacion,descOp);
 
-            db.insert(Utilidades.Crear_Tabla_Operaciones,Utilidades.Registro_IdOperacion,values);
+            Long idResult = db.insert(Utilidades.Tabla_Operaciones,Utilidades.Registro_IdOperacion,values);
             Toast.makeText(getApplicationContext(), "Operación registrada correctamente", Toast.LENGTH_SHORT).show();
+
         } catch (SQLException e) {
             e.printStackTrace();
             Toast.makeText(getApplicationContext(), "No se pudo registrar la operación", Toast.LENGTH_SHORT).show();

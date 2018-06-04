@@ -31,6 +31,10 @@ public class MenuAdmin extends Activity {
             Intent pantAsigAn = new Intent(MenuAdmin.this,AsignarAnalista.class);
             startActivity(pantAsigAn);
         }
+        else if(v.getId() == R.id.botonPantallaConsultOp){
+            Intent pantConsultOp = new Intent(MenuAdmin.this,ConsultOperaciones.class);
+            startActivity(pantConsultOp);
+        }
     }
 
 

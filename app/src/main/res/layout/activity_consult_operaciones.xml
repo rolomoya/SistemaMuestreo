@@ -4,6 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Controladores.ConsultOperaciones">
+    tools:context=".Controladores.ConsultOperaciones"
+    tools:layout_editor_absoluteY="81dp">
 
+    <ListView
+        android:id="@+id/listViewOperaciones"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </android.support.constraint.ConstraintLayout>
