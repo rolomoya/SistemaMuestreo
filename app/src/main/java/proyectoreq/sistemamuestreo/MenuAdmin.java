@@ -20,7 +20,7 @@ public class MenuAdmin extends Activity {
             Intent pantOp = new Intent(MenuAdmin.this, pantOperacion.class);
             startActivity(pantOp);
         }
-        else if(v.getId() == R.id.botonPantNuevaAct){
+        else if(v.getId() == R.id.botonPantNuevaTarea){
             Intent pantAct = new Intent(MenuAdmin.this,CrearActividad.class);
             startActivity(pantAct);
         }

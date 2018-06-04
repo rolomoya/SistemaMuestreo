@@ -19,22 +19,24 @@
         android:onClick="onClick"/>
 
     <Button
-        android:id="@+id/botonPantNuevaAct"
+        android:id="@+id/botonPantNuevaTarea"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
-        android:text="Crear actividad"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="52dp"
+        android:onClick="onClick"
+        android:text="Crear tarea"
         app:layout_constraintEnd_toEndOf="@+id/botonPantNuevaOp"
-        app:layout_constraintTop_toBottomOf="@+id/botonPantNuevaOp"
-        android:onClick="onClick"/>
+        app:layout_constraintTop_toBottomOf="@+id/botonPantNuevaOp" />
 
     <Button
         android:id="@+id/botonPantAsignarTar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="56dp"
         android:text="Asignar tareas"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.516"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/botonPantAsignarAn" />
 
@@ -47,7 +49,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.515"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/botonPantNuevaAct"
+        app:layout_constraintTop_toBottomOf="@+id/botonPantNuevaTarea"
         android:onClick="onClick"/>
 
     <TextView
