@@ -38,6 +38,14 @@ public class PantInicioSesion extends Activity {
                 Toast.makeText(getApplicationContext(), "Usuario o contraseña incorecta", Toast.LENGTH_SHORT).show();
             }
         }
+
+        if(view.getId() == R.id.botonPantRegistrar) {
+            Toast.makeText(getApplicationContext(), "Accediendo a registrar nuevo analista", Toast.LENGTH_SHORT).show();
+            Intent pantReg = new Intent(PantInicioSesion.this, RegistrarUsuario.class);
+            startActivity(pantReg);
+        }
+
+
     }
 
 }

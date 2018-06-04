@@ -126,14 +126,15 @@
         tools:layout_constraintTop_creator="1" />
 
     <Button
-        android:id="@+id/botonRegistrar"
+        android:id="@+id/botonPantRegistrar"
         android:layout_width="165dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="30dp"
-        android:text="Registrar Usuario"
+        android:text="REGISTRAR"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        android:onClick="onClick"/>
 
 
 </android.support.constraint.ConstraintLayout>
