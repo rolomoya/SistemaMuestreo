@@ -19,7 +19,8 @@
         <activity android:name=".MenuAdmin" />
         <activity android:name=".pantOperacion" />
         <activity android:name=".CrearActividad" />
-        <activity android:name=".AsignarAnalista"></activity>
+        <activity android:name=".AsignarAnalista" />
+        <activity android:name=".RegistrarUsuario"></activity>
     </application>
 
 </manifest>
