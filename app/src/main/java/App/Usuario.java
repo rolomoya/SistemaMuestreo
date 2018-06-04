@@ -4,7 +4,6 @@ public class Usuario {
 
     private String nombre;
     private String contrasena;
-
     private String nom_completo;
 
     public Usuario() {

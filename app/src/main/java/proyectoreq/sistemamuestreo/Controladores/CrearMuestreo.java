@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.Spinner;
 
 import java.util.ArrayList;
 
@@ -21,6 +22,9 @@ public class CrearMuestreo extends Activity {
     ArrayList<String> listUs, listTra;
     ArrayList<Usuario> listObUs;
     ArrayList<Trabajador> listObTr;
+    ArrayList<String> listaOperaciones;
+    ArrayList<Operacion> listaObjOperaciones;
+    Spinner spinnerOp;
 
     ConexionSQLiteHelper conn;
 
@@ -31,6 +35,12 @@ public class CrearMuestreo extends Activity {
 
         conn = new ConexionSQLiteHelper(getApplicationContext(),"bd_muestreos",null,1);
 
+        spinnerOp = (Spinner) findViewById(R.id.spinnerOperacionesMuest);
+        consultarOperaciones();
+        ArrayAdapter<CharSequence> ad = new ArrayAdapter(this, android.R.layout.simple_spinner_item,listaOperaciones);
+        spinnerOp.setAdapter(ad);
+
+
         lvUsuarios = (ListView) findViewById(R.id.listViewUsuariosMuest);
         consultarUsuarios();
 
@@ -40,9 +50,34 @@ public class CrearMuestreo extends Activity {
         lvTrabajadores = (ListView) findViewById(R.id.listViewTrabajadoresMuest);
         consultarTrabajadores();
 
-
         ArrayAdapter adap2 = new ArrayAdapter(this, android.R.layout.simple_list_item_1, listTra);
         lvTrabajadores.setAdapter(adap2);
+    }
+
+    private void consultarOperaciones() {
+        SQLiteDatabase bd = conn.getReadableDatabase();
+        Operacion operacion = null;
+
+        listaObjOperaciones = new ArrayList<Operacion>();
+        Cursor cursor = bd.rawQuery("SELECT * FROM " + Utilidades.Tabla_Operaciones, null);
+        int i = 0;
+        while (cursor.moveToNext()) {
+            operacion = new Operacion();
+            operacion.setNombre(cursor.getString(1));
+            operacion.setDescripcion(cursor.getString(2));
+
+            i++;
+            listaObjOperaciones.add(operacion);
+        }
+
+        obtenerLista();
+    }
+
+    private void obtenerLista() {
+        listaOperaciones = new ArrayList<String>();
+        for(int i = 0; i < listaObjOperaciones.size(); i++){
+            listaOperaciones.add(listaObjOperaciones.get(i).getNombre());
+        }
     }
 
     public void onClick(View view){

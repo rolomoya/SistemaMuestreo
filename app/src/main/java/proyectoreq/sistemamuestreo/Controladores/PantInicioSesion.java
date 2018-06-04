@@ -33,6 +33,7 @@ public class PantInicioSesion extends Activity {
 
         conn = new ConexionSQLiteHelper(this,"bd_muestreos",null,1);
         cargarUsuarios();
+        Toast.makeText(getApplicationContext(), "1 :" + listaObjUsuarios.get(0).getNombre()+"2 :" + listaObjUsuarios.get(1).getNombre(), Toast.LENGTH_SHORT).show();
 
 
     }
@@ -88,9 +89,8 @@ public class PantInicioSesion extends Activity {
             }
             return false;
         }
-
-
     }
+
     public void cargarUsuarios() {
         SQLiteDatabase bd = conn.getReadableDatabase();
 
@@ -99,7 +99,10 @@ public class PantInicioSesion extends Activity {
         while (cursor.moveToNext()) {
             Usuario usuario = new Usuario();
             usuario.setNom_completo(cursor.getString(1));
+            usuario.setNombre(cursor.getString(2));
+            usuario.setContrasena(cursor.getString(3));
             listaObjUsuarios.add(usuario);
+            System.out.println("HOLLAAAA: "+cursor.getString(1));
         }
     }
 
