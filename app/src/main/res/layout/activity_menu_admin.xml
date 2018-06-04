@@ -30,17 +30,6 @@
         app:layout_constraintTop_toBottomOf="@+id/botonPantNuevaOp" />
 
     <Button
-        android:id="@+id/botonPantAsignarTar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="56dp"
-        android:text="Asignar tareas"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.516"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/botonPantAsignarAn" />
-
-    <Button
         android:id="@+id/botonPantAsignarAn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
