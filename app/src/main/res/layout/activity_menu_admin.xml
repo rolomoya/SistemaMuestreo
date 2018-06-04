@@ -77,9 +77,20 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="18dp"
+        android:onClick="onClick"
         android:text="Registrar trabajador"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/botonPantallaConsultOp"
+        app:layout_constraintTop_toBottomOf="@+id/botonPantallaConsultOp" />
+
+    <Button
+        android:id="@+id/botonPantConsultTar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="11dp"
+        android:text="Consultar Tareas"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/botonPantRegTrab"
         android:onClick="onClick"/>
 </android.support.constraint.ConstraintLayout>

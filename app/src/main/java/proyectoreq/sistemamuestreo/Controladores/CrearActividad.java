@@ -43,7 +43,7 @@ public class CrearActividad extends Activity {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
                 if (i!=0){
-                    tipo = lista_tipos.get(i-1);
+                    tipo = lista_tipos.get(i);
                 }else{
                     tipo = "";
                 }
@@ -76,8 +76,6 @@ public class CrearActividad extends Activity {
         System.out.println(tipo);
         ConexionSQLiteHelper conn = new ConexionSQLiteHelper(this,"bd_muestreos",null,1);
         SQLiteDatabase db = conn.getWritableDatabase();
-
-        Toast.makeText(getApplicationContext(), "Tipo: "+tipo, Toast.LENGTH_SHORT).show();
 
         if(! tipo.isEmpty()) {
             try {

@@ -1,13 +1,11 @@
 package App;
 
-public class Actividad {
+public class Tarea {
 
     private String nombre;
     private String tipo;
 
-    public Actividad(String nombre, String tipo) {
-        this.nombre = nombre;
-        this.tipo = tipo;
+    public Tarea() {
     }
 
     public String getNombre() {
