@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
@@ -42,6 +43,15 @@ public class CrearMuestreo extends Activity {
 
         ArrayAdapter adap2 = new ArrayAdapter(this, android.R.layout.simple_list_item_1, listTra);
         lvTrabajadores.setAdapter(adap2);
+    }
+
+    public void onClick(View view){
+        //aqui se llama la instrucción sql para guardar el nombre y descripcion de la operacion
+        registrar_Muestreo();
+    }
+
+    private void registrar_Muestreo() {
+        
     }
 
     public void consultarUsuarios() {
