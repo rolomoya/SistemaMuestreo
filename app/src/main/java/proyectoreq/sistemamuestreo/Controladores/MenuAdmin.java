@@ -42,6 +42,9 @@ public class MenuAdmin extends Activity {
         }else if(v.getId() == R.id.botonPantConsultTar){
             Intent pantConsultTar = new Intent(MenuAdmin.this,ConsultarTareas.class);
             startActivity(pantConsultTar);
+        }else if(v.getId() == R.id.botonPantCrearMuest){
+            Intent pantCrearMuest = new Intent(MenuAdmin.this, CrearMuestreo.class);
+            startActivity(pantCrearMuest);
         }
     }
 

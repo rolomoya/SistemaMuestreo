@@ -88,9 +88,20 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="11dp"
+        android:onClick="onClick"
         android:text="Consultar Tareas"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/botonPantRegTrab"
+        app:layout_constraintTop_toBottomOf="@+id/botonPantRegTrab" />
+
+    <Button
+        android:id="@+id/botonPantCrearMuest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="Crear Muestreo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         android:onClick="onClick"/>
 </android.support.constraint.ConstraintLayout>

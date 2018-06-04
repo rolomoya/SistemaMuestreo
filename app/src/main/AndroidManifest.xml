@@ -24,7 +24,8 @@
         <activity android:name=".Controladores.ConsultOperaciones" />
         <activity android:name=".Controladores.RegistrarTrabajador" />
         <activity android:name=".Controladores.ConsultarTareas" />
-        <activity android:name=".PantallasAnalista.PantPrincipalAnalista"></activity>
+        <activity android:name=".PantallasAnalista.PantPrincipalAnalista" />
+        <activity android:name=".Controladores.CrearMuestreo"></activity>
     </application>
 
 </manifest>

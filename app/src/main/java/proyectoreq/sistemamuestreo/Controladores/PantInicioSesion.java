@@ -98,8 +98,7 @@ public class PantInicioSesion extends Activity {
         Cursor cursor = bd.rawQuery("SELECT * FROM " + Utilidades.Tabla_Usuarios, null);
         while (cursor.moveToNext()) {
             Usuario usuario = new Usuario();
-            usuario.setNombre(cursor.getString(2));
-            usuario.setContrasena(cursor.getString(3));
+            usuario.setNom_completo(cursor.getString(1));
             listaObjUsuarios.add(usuario);
         }
     }
