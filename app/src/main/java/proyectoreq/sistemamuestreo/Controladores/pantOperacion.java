@@ -1,4 +1,4 @@
-package proyectoreq.sistemamuestreo;
+package proyectoreq.sistemamuestreo.Controladores;
 
 import android.app.Activity;
 import android.content.ContentValues;
@@ -9,6 +9,8 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import proyectoreq.sistemamuestreo.Controladores.ConexionSQLiteHelper;
+import proyectoreq.sistemamuestreo.R;
 import proyectoreq.sistemamuestreo.utilidades.Utilidades;
 
 public class pantOperacion extends Activity {

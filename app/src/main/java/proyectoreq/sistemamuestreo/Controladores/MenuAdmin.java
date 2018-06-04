@@ -1,9 +1,11 @@
-package proyectoreq.sistemamuestreo;
+package proyectoreq.sistemamuestreo.Controladores;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+
+import proyectoreq.sistemamuestreo.R;
 
 public class MenuAdmin extends Activity {
 

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MenuAdmin"
+    tools:context=".Controladores.MenuAdmin"
     tools:layout_editor_absoluteY="81dp">
 
     <Button
@@ -12,11 +12,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="44dp"
+        android:onClick="onClick"
         android:text="Crear operación"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/botonContinuar"
-        android:onClick="onClick"/>
+        app:layout_constraintTop_toBottomOf="@+id/botonContinuar" />
 
     <Button
         android:id="@+id/botonPantNuevaTarea"
@@ -34,12 +34,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="48dp"
+        android:onClick="onClick"
         android:text="Asignar analista"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.515"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/botonPantNuevaTarea"
-        android:onClick="onClick"/>
+        app:layout_constraintTop_toBottomOf="@+id/botonPantNuevaTarea" />
 
     <TextView
         android:id="@+id/titulo"
@@ -60,4 +60,14 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/botonPantallaConsultOp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:text="Consultar Operaciones"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/botonPantAsignarAn" />
 </android.support.constraint.ConstraintLayout>

@@ -9,18 +9,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".PantInicioSesion">
+        <activity android:name=".Controladores.PantInicioSesion">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MenuAdmin" />
-        <activity android:name=".pantOperacion" />
-        <activity android:name=".CrearActividad" />
-        <activity android:name=".AsignarAnalista" />
-        <activity android:name=".RegistrarUsuario"></activity>
+        <activity android:name=".Controladores.MenuAdmin" />
+        <activity android:name=".Controladores.pantOperacion" />
+        <activity android:name=".Controladores.CrearActividad" />
+        <activity android:name=".Controladores.AsignarAnalista" />
+        <activity android:name=".Controladores.RegistrarUsuario"></activity>
     </application>
 
 </manifest>

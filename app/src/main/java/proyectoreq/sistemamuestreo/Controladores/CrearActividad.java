@@ -1,9 +1,12 @@
-package proyectoreq.sistemamuestreo;
+package proyectoreq.sistemamuestreo.Controladores;
 
 import android.app.Activity;
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
+
+import proyectoreq.sistemamuestreo.Controladores.ConexionSQLiteHelper;
+import proyectoreq.sistemamuestreo.R;
 
 public class CrearActividad extends Activity {
 

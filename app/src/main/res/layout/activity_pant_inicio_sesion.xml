@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="proyectoreq.sistemamuestreo.PantInicioSesion"
+    tools:context="proyectoreq.sistemamuestreo.Controladores.PantInicioSesion"
     tools:layout_editor_absoluteX="0dp"
     tools:layout_editor_absoluteY="81dp">
 
@@ -29,6 +29,7 @@
         android:layout_marginTop="59dp"
         android:ems="10"
         android:inputType="textPassword"
+        android:text="admin"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/campoUsuario"
         app:layout_constraintTop_toBottomOf="@+id/campoUsuario"
@@ -42,6 +43,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
+        android:text="ihasbum"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewNombreU"

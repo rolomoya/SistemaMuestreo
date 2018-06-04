@@ -1,4 +1,4 @@
-package proyectoreq.sistemamuestreo;
+package proyectoreq.sistemamuestreo.Controladores;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
